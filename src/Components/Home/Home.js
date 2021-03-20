@@ -1,10 +1,9 @@
 import React from 'react';
 
 const home = () => {
-
     return (
         <div>
-            <h1>this is home</h1>
+            <h3>this is home</h3>
         </div>
     );
 };

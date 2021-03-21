@@ -14,10 +14,10 @@ const Header = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div className="navbar-nav menubar">
                         <Link to="/home" className="nav-link">Home</Link>
-                        <Link to="/about" className="nav-link">Destination</Link>
-                        <Link to="/about" className="nav-link">Blog</Link>
-                        <Link to="/about" className="nav-link">Contact</Link>
-                        <Link to="/Login" className="nav-link">Login</Link>
+                        <Link to="/destination" className="nav-link">Destination</Link>
+                        <Link to="/blog" className="nav-link">Blog</Link>
+                        <Link to="/contact" className="nav-link">Contact</Link>
+                        <Link to="/Login" className="nav-link btn btn-warning">Login</Link>
                     </div>
                 </div>
             </div>

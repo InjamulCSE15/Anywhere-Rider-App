@@ -8,6 +8,7 @@ import {
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
+import Notfound from './Components/Login/Notfound/Notfound';
 
 
 
@@ -26,7 +27,9 @@ function App() {
         <Route path="/Login">
           <Login />
         </Route>
-        
+        <Route path="*">
+            <Notfound />
+          </Route>
       </Switch>
 
     </Router>

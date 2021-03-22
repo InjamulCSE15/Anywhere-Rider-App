@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const Driver = (props) => {
-    const {name, image} = props.rider
+    const {name, image,id} = props.ride
     return (
         <div className="col">
             <div className="card h-100">

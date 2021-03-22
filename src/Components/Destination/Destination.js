@@ -3,16 +3,14 @@ import { useParams } from 'react-router';
 import rawData from '../Fakedata/data.json';
 
 
-
-
 const Destination = () => {
     const { ride } = useParams();
-    const recentRide = rawData.find(transport => transport.type === ride);
+    const recentRide = rawData.find(transport => transport.name === ride);
  console.log(rawData);
     
     return (
-        <>
-        <img src={recentRide.image} alt= "" />
+        <div>
+        {/* <img src={recentRide.image} alt= "" /> */}
         <div className="container row m-auto  g-5">
             <div className="col-sm-6">
                 <div className="card">
@@ -33,7 +31,7 @@ const Destination = () => {
             </div>
 
         </div>
-        </>
+        </div>
     );
 };
 

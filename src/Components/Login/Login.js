@@ -86,8 +86,7 @@ const Login = () => {
 
         user.updateProfile({
             displayName: name
-
-
+            
         }).then(function () {
 
         }).catch(function (error) {
@@ -151,14 +150,16 @@ const Login = () => {
                     <br />
                     <br />
                     <button className="submit-google" align="center" onClick={handleGoogleSignIn}> <FontAwesomeIcon icon={faGoogle} />     Continue with Google</button>
+                    <br/>
+                    <br/>
+                    <>
+                    {newUser && <label className="unNewUser" onClick={() => setNewUser(!newUser)}  htmlFor='!newUser'>Already Have an account?</label>}
+                    <br/>
+                    {!newUser && <label className="unNewUser" onClick={() => setNewUser(!newUser)} htmlFor='newUser'>Don't have any account?</label>}
+                    <br/>
+                    </>
                     <p className="forgot" align="center"><a href="#">Forgot Password?</a></p>
-                    {newUser && <label style={{ fontSize: '20px' }} htmlFor='!newUser'>Already Have an account?</label>}
-                    {!newUser && <label style={{ fontSize: '20px' }} htmlFor='newUser'>Don't have any account?</label>}
 
-                    {!newUser && <input type="checkbox" onChange={() => setNewUser(!newUser)}>
-                    </input>}
-                    {newUser && <input type="checkbox" onChange={() => setNewUser(!newUser)}>
-                    </input>}
                     <p style={{ color: 'red' }}>{user.error}</p>
                     {user.success && <p style={{ color: 'green' }}>User {newUser ? 'Signed Up' : 'Sign In'} Successfully</p>}
                 </form>

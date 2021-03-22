@@ -8,8 +8,12 @@ import {
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
-import Notfound from './Components/Login/Notfound/Notfound';
+
 import { createContext, useState } from 'react';
+import Notfound from './Components/Notfound/Notfound';
+import Destination from './Components/Destination/Destination';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Blog from './Components/Blog/Blog';
 
 export const UserContext = createContext();
 
@@ -19,6 +23,7 @@ function App() {
 
   return (
     <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
+      <p className="btn btn-success m-3">User Name {loggedInUser.name}</p>
     <Router>
       <Header />
       <Switch>
@@ -28,12 +33,21 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
-        <Route path="/Login">
+        <Route path="/login">
           <Login />
         </Route>
-        <Route path="*">
+        <PrivateRoute path="/destination/from/:ride">
+        <Destination />
+        </PrivateRoute>
+        {/* <Route path="/destination">
+          <Destination />
+        </Route> */}
+        <Route path="/blog">
+          <Blog />
+        </Route>
+        {/* <Route path="*">
             <Notfound />
-          </Route>
+          </Route> */}
       </Switch>
 
     </Router>

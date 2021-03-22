@@ -87,17 +87,17 @@ font-family: 'Ubuntu', sans-serif;
     cursor: pointer;
       border-radius: 5em;
       color: #fff;
-      background: linear-gradient(to right, #9C27B0, #E040FB);
+      background: linear-gradient(to right, #e63720, #e92121);
       border: 0;
       text-align: center;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 35px;
+      padding-right: 35px;
       padding-bottom: 10px;
       padding-top: 10px;
       font-family: 'Ubuntu', sans-serif;
       margin-left: 20%;
       margin-right: 15%;
-      font-size: 13px;
+      font-weight: bold;
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
   }
 
@@ -110,7 +110,7 @@ font-family: 'Ubuntu', sans-serif;
 
 a {
     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #E1BEE7;
+    color: #080808;
     text-decoration: none
 }
 

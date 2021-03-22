@@ -39,9 +39,9 @@ function App() {
         <PrivateRoute path="/destination/from/:ride">
         <Destination />
         </PrivateRoute>
-        {/* <Route path="/destination">
+        <Route path="/destination">
           <Destination />
-        </Route> */}
+        </Route>
         <Route path="/blog">
           <Blog />
         </Route>

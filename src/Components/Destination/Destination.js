@@ -1,14 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router';
+
 import riderData from '../Fakedata/data.json';
 import './Destination.css';
 
 
 const Destination = () => {
     const { ride } = useParams();
-    const recentRide = riderData.map(transport => transport.name === ride);
+    const recentRide = riderData.find(transport => transport.name === ride);
 
- console.log(riderData);
+    console.log(recentRide);
     
     return (
         <div className="container row m-auto  g-5">

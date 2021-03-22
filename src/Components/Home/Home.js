@@ -7,7 +7,6 @@ const Home = () => {
     const [rider, setRider] = useState({})
     useEffect( () => {
         setRider(riderData [0]);
-        console.log(riderData);
     },[])
 
     return (
@@ -15,7 +14,7 @@ const Home = () => {
 
                <div className="row row-cols-1 row-cols-md-4 g-5 m-auto">
                {
-                   riderData.map(ride => <Link to={`/destination/from/${ride.name}`}><Driver ride={ride} key={ride.id}></Driver></Link>)
+                   riderData.map(riderData => <Link to={`/destination/from/${riderData.name}`}><Driver riderData={riderData} key={riderData.id}></Driver></Link>)
                }
            </div>
 

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const [rider, setRider] = useState({})
     useEffect( () => {
-        setRider(riderData);
+        setRider(riderData [0]);
         console.log(riderData);
     },[])
 

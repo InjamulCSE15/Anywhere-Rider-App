@@ -1,25 +1,24 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import rawData from '../Fakedata/data.json';
+import riderData from '../Fakedata/data.json';
+import './Destination.css';
 
 
 const Destination = () => {
     const { ride } = useParams();
-    const recentRide = rawData.find(transport => transport.name === ride);
- console.log(rawData);
+    const recentRide = riderData.map(transport => transport.name === ride);
+
+ console.log(riderData);
     
     return (
-        <div>
-        {/* <img src={recentRide.image} alt= "" /> */}
         <div className="container row m-auto  g-5">
-            <div className="col-sm-6">
-                <div className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">Special title treatment</h5>
-                        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                    </div>
-                </div>
+            <div className="col-sm-6 main">
+                <h3 className="sign" align="center">Where do you want to go?</h3>
+                <form className="form1">
+                    <input className="un "  type="text" align="center" placeholder="Pick up from" />
+                    <input className="un " type="text"  align="center" placeholder="Enter your destination" />
+                    <button className="unNewUser" type="text"  align="center">Search Rider</button>
+                </form>
             </div>
             <div className="col-sm-6">
                 <div className="card">
@@ -29,9 +28,8 @@ const Destination = () => {
                     </div>
                 </div>
             </div>
-
         </div>
-        </div>
+  
     );
 };
 
